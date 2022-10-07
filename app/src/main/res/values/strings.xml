@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EuroTest</string>
+    <string name="By">By</string>
+    <string name="loading">Its Loading</string>
+    <string name="loading_error">Error While Loading</string>
+    <string name="featured">Featured</string>
+</resources>
