@@ -8,12 +8,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -124,6 +127,7 @@ fun Item(
         OverlappingImageTitle(
             imageUrl = video.thumb,
             sport = video.sport,
+            showPlayIcon = true,
             modifier = Modifier.clickable {
                 val encodedUrl = URLEncoder.encode(video.url, StandardCharsets.UTF_8.toString())
                 onVideoClicked(encodedUrl)
@@ -140,7 +144,8 @@ fun Item(
 fun OverlappingImageTitle(
     modifier: Modifier = Modifier,
     sport: String,
-    imageUrl: String
+    imageUrl: String,
+    showPlayIcon: Boolean = false
 ) {
     Box(
         modifier = modifier
@@ -163,6 +168,35 @@ fun OverlappingImageTitle(
                 .background(Color.LightGray),
             contentScale = ContentScale.Crop
         )
+        if (showPlayIcon) {
+            Box(
+                modifier = Modifier.align(Alignment.Center)
+            ) {
+                /* NB : it is better to use the light weight vectors
+                here than the assets provided to save more space on the
+                deployed app
+
+                Icon(
+                    Icons.Rounded.PlayArrow,
+                    modifier = Modifier
+                        .fillMaxHeight(0.2f)
+                        .aspectRatio(1f),
+                    contentDescription = "play icon",
+                    tint = Color.White
+                )
+                */
+
+                Icon(
+                    modifier = Modifier
+                        .fillMaxHeight(0.2f)
+                        .aspectRatio(1f),
+                    painter = painterResource(id = R.drawable.ic_play_icon),
+                    contentDescription = "play icon",
+                    tint = Color.White
+                )
+            }
+        }
+
         Box(
             modifier = Modifier
                 .align(Alignment.BottomStart)
