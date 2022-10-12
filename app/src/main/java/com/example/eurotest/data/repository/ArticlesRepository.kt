@@ -1,12 +1,12 @@
 package com.example.eurotest.data.repository
 
-import com.example.eurotest.data.local.VideoDto
+import com.example.eurotest.data.local.model.VideoDto
 import com.example.eurotest.data.local.LocalService
-import com.example.eurotest.data.local.SportDto
-import com.example.eurotest.data.local.StoryDto
-import com.example.eurotest.data.model.SportResponse
-import com.example.eurotest.data.model.StoriesResponse
-import com.example.eurotest.data.model.VideosResponse
+import com.example.eurotest.data.local.model.SportDto
+import com.example.eurotest.data.local.model.StoryDto
+import com.example.eurotest.data.remote.model.SportResponse
+import com.example.eurotest.data.remote.model.StoriesResponse
+import com.example.eurotest.data.remote.model.VideosResponse
 import com.example.eurotest.data.remote.RetrofitService
 import com.example.eurotest.domain.ArticlesRepository
 import com.example.eurotest.domain.model.Article

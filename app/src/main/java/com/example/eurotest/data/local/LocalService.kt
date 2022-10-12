@@ -1,5 +1,7 @@
 package com.example.eurotest.data.local
 
+import com.example.eurotest.data.local.model.StoryDto
+import com.example.eurotest.data.local.model.VideoDto
 import kotlinx.coroutines.flow.Flow
 
 interface LocalService {

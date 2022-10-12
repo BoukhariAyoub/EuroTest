@@ -1,6 +1,6 @@
 package com.example.eurotest.data.remote
 
-import com.example.eurotest.data.model.MainResponse
+import com.example.eurotest.data.remote.model.MainResponse
 import retrofit2.http.GET
 
 interface RetrofitService {

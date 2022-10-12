@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.eurotest.data.local.model.SportDto
+import com.example.eurotest.data.local.model.StoryDto
+import com.example.eurotest.data.local.model.VideoDto
 
 @Database(
     entities = [StoryDto::class, VideoDto::class, SportDto::class],

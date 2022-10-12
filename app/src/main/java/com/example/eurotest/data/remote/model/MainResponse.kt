@@ -1,4 +1,4 @@
-package com.example.eurotest.data.model
+package com.example.eurotest.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 

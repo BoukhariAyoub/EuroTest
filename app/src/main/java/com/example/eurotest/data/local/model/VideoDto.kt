@@ -1,9 +1,6 @@
-package com.example.eurotest.data.local
+package com.example.eurotest.data.local.model
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "video")
 data class VideoDto(
@@ -13,6 +10,7 @@ data class VideoDto(
     @ColumnInfo(name = "thumb") var thumb: String,
     @ColumnInfo(name = "url") var url: String,
     @ColumnInfo(name = "date") var date: Double,
+    @SuppressWarnings(RoomWarnings.PRIMARY_KEY_FROM_EMBEDDED_IS_DROPPED)
     @Embedded(prefix = "sport") val sport: SportDto,
     @ColumnInfo(name = "views") var views: Int
 )

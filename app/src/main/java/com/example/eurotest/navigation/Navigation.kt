@@ -25,10 +25,7 @@ fun Navigation() {
                     navController.navigate(Screen.VideoPlayerScreen.route + "/$videoUrl")
                 },
                 onStoryClicked = { storyId ->
-                    navController.navigate(Screen.StoryScreen.route + "/$storyId") {
-                        //FIXME : for some reason this is not working
-                        popUpTo(Screen.ArticlesScreen.route) { inclusive = true }
-                    }
+                    navController.navigate(Screen.StoryScreen.route + "/$storyId")
                 }
             )
         }
